@@ -85,15 +85,6 @@ img{ max-width:100%; display:block; }
   color:#fff;
   overflow:hidden;
 }
-.hero::after{
-  content:"";
-  position:absolute;
-  top:50%; right:-10%;
-  width:640px; height:640px;
-  transform:translateY(-50%);
-  background:radial-gradient(circle,rgba(230,0,40,.35) 0%,rgba(230,0,40,0) 70%);
-  pointer-events:none;
-}
 .hero .container{
   position:relative;
   z-index:2;
