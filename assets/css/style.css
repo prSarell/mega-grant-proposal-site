@@ -367,6 +367,8 @@ details.outline li{ margin-bottom:10px; }
 .lead-head h3{ margin-bottom:2px; }
 .lead-card h3{ margin-bottom:2px; }
 .lead-role{ color:var(--red); font-weight:600; font-size:.85rem; text-transform:uppercase; letter-spacing:.04em; margin-bottom:0; }
+.lead-email{ font-size:.85rem; color:var(--muted); text-decoration:none; }
+.lead-email:hover{ color:var(--red); }
 @media(max-width:640px){ .leads-grid{ grid-template-columns:1fr; } }
 
 /* supporting gallery */
