@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creative Pedagogical Pipeline — RMIT University</title>
+<meta name="description" content="Epic MegaGrants proposal: a pedagogical production pipeline linking Unreal Engine and generative AI across RMIT's Bachelor of Animation program.">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container">
+    <a class="topbar-brand" href="https://www.rmit.edu.au" target="_blank" rel="noopener">
+      <svg class="rmit-logo-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 34.56" aria-label="RMIT University logo">
+        <g id="RMIT_LOGO">
+          <polygon points="79.26 2.17 81.88 2.17 81.88 1.21 72.74 1.21 72.74 2.17 75.38 2.17 75.38 20.57 72.74 20.57 72.74 21.53 81.88 21.53 81.88 20.57 79.26 20.57 79.26 2.17" /><path d="M95.9,21.53v-1H93.1V2c4.28-.22,5,.7,5.56,4.59h.94l-.33-5.35H83l-.33,5.35h1C84.19,2.67,84.91,1.75,89.2,2v18.6H86.4v1h9.5" /><path d="M34.58,9.92V2.17h2.64c2.71,0,3.72.68,3.72,4.09,0,2.73-1.13,3.66-3.87,3.66H34.58M71,2.17v-1H63.5L59.09,15.1,54.84,1.21H47.37v1H50v18.4H47.16a2.39,2.39,0,0,1-2.66-2.65c0-5-1.07-6.75-5.82-7.49v-.06c2.83-.3,6.45-1.11,6.45-4.54,0-4.23-3.94-4.62-7.27-4.62h-9.8v1h2.62v18.4H28.06v1H37.2v-1H34.58v-9.7A7.21,7.21,0,0,1,39,12c.79.67,1.22,2.76,1.22,5.27,0,3.11,1.6,4.29,4.68,4.29h8.81v-1H51.16V2.48h.07l6,19.05h1l6.09-19h.09V20.57H61.87v1H71v-1H68.38V2.17Z" /><path d="M30.68,27.68a.21.21,0,0,0-.19-.25H30v-1h1.14c.51,0,.72.21.72.72v4.41a1.91,1.91,0,1,0,3.82,0v-4.4c0-.51.22-.72.73-.72h1.13v1H37a.21.21,0,0,0-.24.19.06.06,0,0,0,0,.06v4a2.82,2.82,0,0,1-3,2.92,2.83,2.83,0,0,1-3-2.92Z" /><path d="M38.25,33.45h.49a.22.22,0,0,0,.25-.2V26.46h1l3.54,5c.3.43.67,1.09.67,1.09h0c0-.36-.07-.73-.08-1.09V27.18c0-.51.22-.72.74-.72H46v1h-.49a.22.22,0,0,0-.25.19v6.8h-1l-3.56-5c-.29-.43-.65-1.08-.65-1.08h0s.06.64.06,1.08V33.7c0,.51-.21.72-.72.72H38.25Z" /><path d="M47.25,33.45H48v-6h-.78v-1h2.63v1H49.1v6h.78v1H47.25Z" /><path d="M51.11,27.68a.32.32,0,0,0-.37-.25h-.16v-1h.63c.56,0,.76.12.94.65L53.9,32c.14.43.3,1.1.3,1.1h0c.09-.37.19-.74.31-1.1l1.75-4.91c.19-.53.37-.65.93-.65h.64v1h-.16c-.21,0-.31,0-.37.25l-2.51,6.74h-1.2Z" /><path d="M59.23,27.43H58.5v-1h4.69c.5,0,.72.21.72.72v1h-1v-.5a.22.22,0,0,0-.19-.25H60.37v2.49h2.78v1H60.37v2.32a.21.21,0,0,0,.2.24h2.37a.22.22,0,0,0,.25-.2V32.7h1v1c0,.51-.21.72-.72.72H60c-.51,0-.73-.21-.73-.72Z" /><path d="M65.81,27.43h-.74v-1h3.48a2.21,2.21,0,0,1,2.38,2.33A2,2,0,0,1,69.5,30.9v0a.82.82,0,0,1,.33.36l1,1.9c.12.24.3.26.57.26h.15v1H71c-.62,0-.84-.07-1.1-.59l-1.09-2.15c-.2-.37-.35-.43-.79-.43h-1v3.17H65.8Zm2.59,2.85a1.3,1.3,0,0,0,1.37-1.44,1.27,1.27,0,0,0-1.35-1.41H66.93v2.85Z" /><path d="M73,32.57a2.89,2.89,0,0,0,2,1,1.24,1.24,0,0,0,1.37-1.18c0-1.67-3.85-1.41-3.85-3.9A2.3,2.3,0,0,1,75,26.32c.85,0,2.27.39,2.27,1.47v.65h-1v-.37c0-.42-.59-.72-1.23-.72-.85,0-1.4.47-1.4,1.07,0,1.62,3.84,1.25,3.84,3.87a2.32,2.32,0,0,1-2.53,2.27,3.55,3.55,0,0,1-2.64-1.19Z" /><path d="M78.63,33.45h.78v-6h-.78v-1h2.64v1h-.78v6h.78v1H78.63Z" /><path d="M84.85,27.43h-1.6a.22.22,0,0,0-.25.19v.56H82V27.13c0-.5.17-.67.68-.67h5.48c.51,0,.68.17.68.67v1.05h-1v-.5a.21.21,0,0,0-.19-.25H86v7H84.86Z" /><path d="M92.05,31l-2-3.24a.46.46,0,0,0-.48-.28h-.23v-1h.52a1,1,0,0,1,1.08.61l1.2,2c.26.44.49.89.49.89h0s.22-.45.49-.89l1.19-2a1,1,0,0,1,1.07-.61h.52v1h-.21a.48.48,0,0,0-.5.28l-2,3.24v3.47H92.05Z" />
+        </g>
+        <g id="Pixel">
+          <path d="M11.89,0h-3V2.47h-5V7.61H0v7.54H3.8v5.14H8.85v2.46h2.68c6.25,0,11.76-5,11.76-11.35A11.46,11.46,0,0,0,11.89,0" style="fill:#e60028" />
+        </g>
+      </svg>
+      <span class="topbar-divider"></span>
+      <span class="topbar-title">Epic MegaGrants Proposal</span>
+    </a>
+    <a class="topbar-link" href="https://www.rmit.edu.au" target="_blank" rel="noopener">rmit.edu.au ↗</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-copy">
+      <span class="hero-eyebrow">Epic MegaGrants · Category: Other</span>
+      <h1>Creative Pedagogical Pipeline</h1>
+      <p class="hero-lede">RMIT, the Asia-Pacific's top ranked animation school, is building a suite of pedagogical pipeline tools that integrate Unreal Engine and GenAI into animation production — designed to support students and staff to produce original and experimental creative works.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#overview">Read the proposal</a>
+        <a class="btn btn-outline" href="#budget">View the budget</a>
+        <a class="btn btn-outline" href="mailto:patsarell@gmail.com">Contact the team</a>
+      </div>
+    </div>
+    <figure class="hero-art">
+      <img src="assets/img/nwf-concept-collage.jpg" alt="Concept art for Not Worth Fixing: a girl and a robot companion at the shoreline, plus an early character sketch.">
+      <div class="hero-art-tint"></div>
+    </figure>
+  </div>
+</section>
+
+<div class="quickfacts">
+  <div class="container">
+    <div><div class="qf-label">Institution</div><div class="qf-value">RMIT University</div></div>
+    <div><div class="qf-label">Category</div><div class="qf-value">Other</div></div>
+    <div><div class="qf-label">Submission closes</div><div class="qf-value">5 Sep 2026</div></div>
+    <div><div class="qf-label">Duration</div><div class="qf-value">18 months</div></div>
+    <div><div class="qf-label">Requested (USD)</div><div class="qf-value">$149,405</div></div>
+    <div><div class="qf-label">Pilot productions</div><div class="qf-value">3</div></div>
+  </div>
+</div>
+
+<div class="container page">
+  <main class="main-col">
+
+    <section class="block" id="overview">
+      <h2>Project description</h2>
+      <h3>Introduction</h3>
+      <p>This project will create a new production pipeline for animation education that enables sharing and review and manages data and asset compatibility across a range of applications used in RMIT's Animation program. Unreal Engine is an integrated hub within the system as the environment for real time rendering, interaction, VR and multi-platform delivery. The pipeline also handles the exchange of assets with generative tools. Work that is compatible across applications can be released in more than one form, so a project made for linear film can also become a real-time or interactive work. The pipeline will be built and tested during the production of three staff-led production projects. The tools, templates, documentation and research findings produced will be shared via industry and academic conferences and journal articles, and the code will be published open source.</p>
+      <p>The pipeline will be integrated into RMIT's Bachelor of Animation program, initially in the 3D animation major and VFX minor. Each year this program takes large cohorts of new users through various animation projects, toward industry-level practice, while maintaining a commitment to equitable learning. In this setting, the pipeline returns time to creative work and widens the range of projects students can attempt. For staff, the pipeline provides a dependable structure for teaching production.</p>
+      <p>This proposal describes the pipeline, the three pilot projects (enabling its design and testing), its integration with Unreal Engine and with generative tools, its place in the program's teaching, an eighteen-month development plan with an indicative budget, and the research to be undertaken during the process. Project outcomes include a working pipeline, three finished productions, and a fully specified and documented model that other institutions can adopt.</p>
+
+      <div class="callout">
+        <div class="callout-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8 14L6 21L12 18L18 21L16 14"/></svg>
+        </div>
+        <div>
+          <p>Consistently ranked #1 in Oceania for Animation since 2020.</p>
+          <div class="fine">Animation Career Review, 2020–2025. RMIT's Animation program has an annual cohort of approximately 500 students.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="need">
+      <h2>The need</h2>
+      <p>A commercial pipeline's primary goal is data management, communication, efficiency, profitability, and creativity. In a university Animation program using a studio model of education, students and faculty handle both production management and project creation, as well as pedagogy and the craft of animation. In addition to data management and communication, the role of a "pedagogical pipeline" is to create a fertile ground for skills progression, creative collaboration, building a community of practice and equitable learning. The pipeline must support work that is still exploring production options and artists who are still learning their craft.</p>
+      <p>Time spent on data transfer, conforming files etc is time not spent on performance, timing, design, and storytelling. The time and cognitive cost also shape what students attempt, the range, diversity, complexity, and scale of their projects. Faced with a difficult transfer between two applications, many students will use the tool already configured for them and reduce the scope of the work to suit it, limiting their creative expression to toolset boundaries — often simply defaulting to the familiar. Projects that cross between real time rendering, generative processes, hand drawn 2D, stop motion, simulation and interaction become impractical for reasons unrelated to the student's ability. And this limits creativity.</p>
+      <p class="pull-quote">"The mind takes the shape of what it rests on."</p>
+    </section>
+
+    <section class="block" id="pipeline">
+      <h2>Building a pedagogical and production pipeline</h2>
+      <p>The proposed system is designed to reduce the mental load of data management and troubleshooting for students and staff, improve access and learning for Unreal Engine, build a community of practice, support peer review, creative collaboration and facilitate sharing of assets workflows and inspiration across the Animation Program.</p>
+      <p>It achieves this via three key aspects of the design:</p>
+      <ul>
+        <li>Linking and integrating processes, filetypes and workflows across a multitude of animation production software with a central online review system, allowing students to publish work for review by peers and teachers directly from Unreal Engine to be reviewed online.</li>
+        <li>Developing and supporting tools within Unreal Engine to facilitate the transfer, iteration and tracking of assets and motion created by RMIT Animation cohorts.</li>
+        <li>Partnering with Unreal Engine to support staff and students learn, engage and create work using Unreal Engine.</li>
+      </ul>
+      <p>These goals align with new curricular offerings currently in development at RMIT, where students operate in a simulated studio environment, accessing project assets and other resources that are already structured correctly and begin their work. Whether the student is operating as animator (earlier years) or director (later years), they are not required to wade through the quagmire of production management in order to begin their work and learning.</p>
+      <p>The pipeline development process will include the creation of custom plugins and tools for each application to handle import, export and project setup inside Unreal Engine, giving the students access to professional grade toolsets for collaboration that are missing from the default setup in most software.</p>
+    </section>
+
+    <section class="block" id="unreal">
+      <h2>Unreal Engine integration</h2>
+      <p>Unreal Engine will provide a hub for animation, rendering, VR, interaction, games and multi-platform immersive projects. The pipeline will allow students to work either exclusively in Unreal Engine or in any combination of software used by students at RMIT.</p>
+      <p>Combined with LLM use inside Unreal Engine, students will be supported to develop their own tools and workflows unique to their own productions, freeing students from technical hurdles and fostering a diverse range of highly creative and original works and tools — opening up the possibility of Unreal Engine playing a key role in student projects throughout the program.</p>
+    </section>
+
+    <section class="block" id="genai">
+      <h2>Generative tools</h2>
+      <p>Generative AI is becoming an integrated part of animation production, used for pre-production, asset and motion creation, effects and, in some cases, final imagery. These tools often have technical requirements that existing pipelines were not designed for: prompt and context material treated as production assets, model and node configurations that must be versioned, training datasets built from engine renders, or outputs that need to return to the scene they came from. The pipeline manages these as project data, with the same storage, permissions and review as any other asset.</p>
+      <p>Integration with Unreal Engine runs in both directions. The pipeline will use an MCP server for Unreal Engine so that engine state, cameras, lighting and scene structure can serve as context and control input for generative processes, and so that generated meshes, textures, motion and image sequences arrive in the engine without manual handling. Existing open-source generative tools (e.g. ComfyUI custom nodes) are connected through the same routing. Newer engine capabilities that are not yet in mainstream production, such as gaussian splat rendering, become usable in student and staff projects once assets can move into the engine. The pilot project <em>Maintenance</em> is where this work is developed and tested.</p>
+      <p>The tools available for this kind of work will change substantially over an eighteen-month build. The pipeline is designed to route data between the engine and whatever generative and agentic tools are current, so that new options, including any released by Epic, can be adopted and aligned on release.</p>
+      <p>The pipeline software itself will be developed with a dedicated agentic build system, in which the team specifies and reviews, and coding agents produce and test the tools. This is a practical decision for a small team with an eighteen-month build, and the approach will be documented and published with the rest of the project.</p>
+      <p>Supporting our core principles of creativity and pedagogy, these tools allow students to focus on the creative aspects of AI-integrated production, without the time cost of deep technical setup — but also avoiding the allure of GenAI "shortcuts" in the creative process. Students in the program work with these methods as a normal part of production; graduates trained in this way will carry integrated generative practice into industry as a native skill, at a point when much of the sector is still adapting to it.</p>
+    </section>
+
+    <section class="block" id="curriculum">
+      <h2>Curricular integration</h2>
+      <p>Consistently ranked #1 in Oceania by Animation Career Review since 2020, RMIT's Animation program is widely regarded as a top-ranking animation program in the Asia Pacific. The program has a large student cohort of approximately 500 students spanning 3 years.</p>
+      <p>Our program aims to be software agnostic and/or to adopt the software most relevant to our graduates' industry opportunities. Currently, Unreal Engine is used at various levels of our program, such as in courses dedicated to environment design for VR and in advanced character animation and major student productions, where we are integrating MetaHuman rigs as the basis for work across various production tools. We are tracking developments of the engine to see where it offers opportunities for integration across our 3D animation and VFX offerings and aim to provide opportunities for students to create immersive projects across a variety of tools and software. This project aims to broaden our software adaptability across our program, with Unreal Engine as an integrated production hub.</p>
+    </section>
+
+    <section class="block" id="plan">
+      <h2>Development plan</h2>
+      <p>The project is currently in the planning, specification and testing stage. We have rolled out the first round of software plugins and tools which support student submissions from animation production software to a cloud based review site. The positive impact of these initial tests on student learning and creativity is very inspiring.</p>
+      <table class="data">
+        <caption>Eighteen-month phased delivery</caption>
+        <thead>
+          <tr><th>Phase</th><th>Months</th><th>Deliverable</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1. Core system</td><td>1–4</td><td>Admin and teaching interfaces, template engine, permissions, project instantiation, storage integration</td></tr>
+          <tr><td>2. Transfer layer</td><td>3–8</td><td>Conversion and conform services, automated export presets, review integration</td></tr>
+          <tr><td>3. Application plugins</td><td>5–12</td><td>Unreal, Maya, Houdini, ZBrush, Substance, Toon Boom and ComfyUI plugins for native import, export and project setup, compatibility and function mapping</td></tr>
+          <tr><td>4. Production trial</td><td>8–15</td><td>The three pilot productions. Live testing the system, with iteration of system functions against production use</td></tr>
+          <tr><td>5. Curriculum rollout</td><td>12–18</td><td>Deployment across 3D animation program offerings, teaching staff training, documentation. New course integration review mid 2027</td></tr>
+          <tr><td>6. Open-source release and project completion</td><td>15–18</td><td>Public repository, documentation, packaged plugins, published findings. Completion of test projects and first student works</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="block" id="outcomes">
+      <h2>Outcomes and impact</h2>
+      <div class="feature-grid">
+        <div class="feature">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.3"/><path d="M4 20c0-3 2.5-5.5 5-5.5s5 2.5 5 5.5"/><path d="M13.5 20c.2-2.2 1.8-4 3.7-4s3.4 1.5 3.8 3.8"/></svg></div>
+          <h4>Scale</h4>
+          <p>Serves ~150 students in 3D animation and VFX, extending to the wider ~500-student animation program as it covers 2D workflows. Future rollout reaches games (~200 students) and masters (~80) programs — a total addressable base of ~750 active users.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-9.5-8.5C1 9.5 2.5 6 6 6c2 0 3.3 1.2 4 2.3C10.7 7.2 12 6 14 6c3.5 0 5 3.5 3.5 6.5C15 16.65 12 21 12 21Z"/></svg></div>
+          <h4>Equitable learning</h4>
+          <p>Reducing production-management overhead lets neurodiverse and other students work to their strengths in creative, intuitive and performance-based work, supporting teamwork, specialisation and a wider range of learning modes.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 8L4 12L9 16"/><path d="M15 8L20 12L15 16"/><line x1="13" y1="6" x2="11" y2="18"/></svg></div>
+          <h4>Community &amp; field contribution</h4>
+          <p>Released open source — application, plugins, templates and documentation — so schools, small studios and independent teams can adopt it directly. Findings, including unsuccessful approaches, are published throughout.</p>
+        </div>
+      </div>
+      <p>Internally, RMIT will consider providing additional funding for the equitable-learning dimension of the project through an internal equitable learning grant (subject to review and alignment).</p>
+      <p>Publication targets include SIGGRAPH and SIGGRAPH Asia, ARS Electronica: Expanded, the Society for Animation Studies Annual Conference, CONFIA, and scholarly journals in Animation Studies and Animation Production including <em>Animation</em> and <em>Animation Practice Process &amp; Production</em>. The three pilot productions provide worked examples of the pipeline in production use, and each aims for international exhibition and screening at major animation festivals, museums and gallery exhibitions.</p>
+    </section>
+
+    <section class="block" id="pilots">
+      <h2>Pilot projects</h2>
+      <p>Developing three productions concurrently tests the pipeline against three distinct workflows and allows creative crossover, with techniques developed for one project adapted and implemented in the others.</p>
+
+      <div class="tabs">
+        <input type="radio" name="pilot-tab" id="tab-nwf" checked>
+        <input type="radio" name="pilot-tab" id="tab-maint">
+        <input type="radio" name="pilot-tab" id="tab-ae">
+
+        <div class="tab-labels">
+          <label for="tab-nwf">Not Worth Fixing</label>
+          <label for="tab-maint">Maintenance</label>
+          <label for="tab-ae">Animal Encounters</label>
+        </div>
+
+        <div class="tab-panels">
+
+          <div class="tab-panel" id="panel-nwf">
+            <div class="project-header">
+              <h3>Not Worth Fixing</h3>
+              <span class="project-lead">Animated short film · Project lead: Pat Sarell</span>
+            </div>
+            <p><strong>Logline:</strong> Living alone on an abandoned farm, a young girl's life is changed forever when she rebuilds and befriends a broken-down robot, until his failing battery forces them on a journey neither may survive.</p>
+            <p>A story about the kind of relationships that don't fit inside a family tree but shape us just as deeply. The mentors, neighbors, and unlikely companions who show up when we need them, ask nothing in return, and quietly change the course of a life. Anchored in a distinctly Australian landscape and told with warmth, humour and heartbreak, it's a film about the deep and often overlooked value of intergenerational connection — and how strangers become the family we choose.</p>
+
+            <div class="project-grid">
+              <figure class="project-still">
+                <img src="assets/img/nwf-concept-collage.jpg" alt="Not Worth Fixing concept art: the girl and the robot at the shoreline, and an early robot character sketch.">
+                <figcaption>Hand drawn concept art + personal photography mixed with AI.</figcaption>
+              </figure>
+              <figure class="project-still">
+                <img src="assets/img/nwf-scout-atks-concept.jpg" alt="Scout and ATKS character concept design.">
+                <figcaption>Scout &amp; ATKS concept design — Diarmaid Fennessy (concept), Pat Sarell (model / 3D adaptation).</figcaption>
+              </figure>
+            </div>
+
+            <details class="outline">
+              <summary>Read the full story outline</summary>
+              <ul>
+                <li>Somewhere in rural Australia a young girl struggles to survive on an abandoned farm until one day she stumbles on a broken down robot hidden in an overgrown sugarcane field.</li>
+                <li>Isolated and alone she gives up her last remaining energy source to revive the hulking relic, repair and rehabilitate him. Replacing his broken foot with a tree stump, teaching him how to walk and bringing him into her world.</li>
+                <li>Unsteady on his feet at first, the girl helps the ancient robot to walk and together they roam the farm, playing, exploring and adventuring further and further afield. Until one day they reach the edge of the farm.</li>
+                <li>Unbeknownst to the girl the robot's battery is failing. Realising his time is limited and worried the girl will soon be on her own, the robot decides they must leave the farm and find people. But the girl won't go. "Mum said I have to wait here," she explains, standing her ground on the farm's boundary.</li>
+                <li>Days pass, the robot's power dwindles and still the girl won't leave. In a last-ditch attempt the robot tells the girl about the sea. Captivated by the robot's description of the briny blue, she agrees to go, on the condition they return to the farm as soon as possible. Little does she know it will be a one-way trip.</li>
+                <li>The next day they set out into the wilds, through thick bush and treacherous terrain. At first the girl is reluctant, always wanting to turn back, but the old robot keeps her going with kindness and patience. The further they go the more signs of life they see — kangaroos and possums watch them, echidnas and gang-gang cockatoos hide in the scrub.</li>
+                <li>Over rivers and across the dunes the two friends travel. As the robot's power dwindles he struggles to carry on and the dynamic shifts between them — sensing something is wrong, the girl rallies the robot on. Trudging up a rocky hillside the robot stumbles and the girl runs to his aid. As he clambers to his feet, something in the air floods the girl's senses — she can smell the sea. A final burst of energy and the girl and the robot crest the hilltop, revealing a stunning ocean view. They've made it!</li>
+                <li>By now the robot is barely able to walk, the girl knows he's dying. Together they rest on the cliff's edge. "I can't go on," the robot tells the girl, "you have everything you need. You are brave and smart and kind. You have to find people who will look after you." He points to some twinkling lights on the horizon — signs of life. The girl understands, but she can't leave.</li>
+                <li>The sun sets and the girl sleeps at the robot's feet. She is fast asleep when his battery finally dies.</li>
+                <li>The next morning the girl awakes. Dries her eyes, says goodbye and leaves.</li>
+                <li>We stay with the robot, time speeds up. Seasons come and go. Decades pass. The ancient relic of a machine folds into the landscape, overgrown by weeds and scrub. He becomes a home for animals. A moss-covered mound.</li>
+                <li>Out of nowhere, we hear the voices of children. A little girl and her brother scamper across the cliff top toward the robot's grave. A young woman, their mother, follows close behind. As the children play she approaches the robot's remains, sits quietly at his feet and signs "thank you."</li>
+              </ul>
+            </details>
+
+            <h4>Connection to the other projects</h4>
+            <p><em>Animal Encounters</em> and <em>Not Worth Fixing</em> take place in the same world, allowing people to interact and connect with Australian wildlife in an Australian environment, exploring corners of the farm and surrounding environment and focusing on Scout's relationship to the world around her. The animals created for <em>Animal Encounters</em> will become part of the short film using a combination of automated keyframe methodology and hand keyframe.</p>
+
+            <h4>Connection to the pipeline</h4>
+            <p><em>Not Worth Fixing</em> is the pipeline's primary test bed for Maya-to-Unreal, Maya-to-ShotGrid, and Unreal-to-ShotGrid workflows, plus network asset publishing and scene-building across Unreal, Maya, Houdini and Blender — including asset transfer, motion data, and publish-and-review tools — built and proven against a real production, not a synthetic test case. The film's team spans students, industry artists, and RMIT staff working side by side, so the pipeline is tested against the full range of skill levels and working styles it needs to support in the classroom: a student animator publishing a shot for review, an industry mentor giving feedback from outside RMIT, a staff pipeline developer iterating on the tool the same week it's used in production.</p>
+            <p>This gives the project a dual role. As a training tool, students and staff learn the Maya-to-Unreal-to-ShotGrid workflow by using it on a real film with real deadlines, not a tutorial exercise. As a development and testing ground, every gap the production hits — a transfer that's too manual, a review step that's too slow — becomes the next thing the pipeline is built to fix, so the tools that reach the wider student cohort have already been proven under real production pressure, not shipped untested.</p>
+
+            <h4>Connection to Unreal</h4>
+            <p><em>Not Worth Fixing</em> uses MetaHuman and Unreal Engine for rendering, with planned tool development inside Unreal Engine. The project functions as a direct R&amp;D pathway for building staff capability and curriculum in Unreal and MetaHuman, not just a production pipeline for the film itself. Developing Scout, a customised MetaHuman character, and ATKS, a MetaHuman skeleton, has given RMIT staff hands-on, tested experience with the MetaHuman-to-Unreal workflow, which is now being converted directly into teaching material.</p>
+            <p>This is already shaping student practice, not just future curriculum: the R&amp;D behind Scout and ATKS is the direct precedent for current third-year students now using MetaHuman in their major projects, giving the cohort a workflow that has already been proven in production rather than one being taught untested. <em>Not Worth Fixing</em> is already generating course material built around Unreal Engine, and its continued development will keep broadening both that material and the cohort's use of the engine.</p>
+          </div>
+
+          <div class="tab-panel" id="panel-maint">
+            <div class="project-header">
+              <h3>Maintenance</h3>
+              <span class="project-lead">Animated short film · Project lead: Andy Buchanan</span>
+            </div>
+            <p>An experimental animated short film utilizing mainstream 3D animation processes, Unreal Engine, as well as integrated generative AI tools. Set in space, the film deals with themes of environment and sustainability — the "maintenance" of the failing ship as an analogy for human neglect of our own "spaceship," Earth. The main character experiences spatial and temporal inconsistencies, ultimately both barely surviving on an inhospitable planet, and concurrently exploding in the ship overhead, as it is revealed through metamorphic transitions that the character is the ship, and the engine of the ship is the planet. The film is experimental in process, narrative and experience.</p>
+
+            <h4>Connection to the other projects</h4>
+            <p>Like both other projects, the film places a high emphasis on environment (both digital and thematic). Character rigs from <em>Not Worth Fixing</em> inform the approach used for the main character in the film. GenAI processes developed for <em>Maintenance</em> will be used for previs elements in <em>NWF</em>, and multiple environment assets are shared across all three productions.</p>
+
+            <h4>Connection to the pipeline and Unreal</h4>
+            <p>In this project, keyframed animation is used for main action. The cartoonish character sculpt (ZBrush, Substance Painter, etc.) is adapted for integration with the MetaHuman system, which is utilized for facial capture, while other animation is created in typical animation software (Maya) and rendered through Unreal.</p>
+            <p>Additionally, GenAI tools are fully integrated in processes, including generation of previs, 3D assets, motion (via OpenPose), and final renders in some cases. GenAI will be used for creating metamorphic sequences, a key visual device of the film. This project includes adoption of existing GenAI tools for Unreal, such as open-source custom ComfyUI nodes for texture generation, as well as the creation of new custom nodes the project and pipeline requires. We will test the limits of the Claude MCP server for production of effects and other elements. Additionally, we plan to use Unreal Engine to develop (and release) new approaches in the creation of synthetic datasets for character consistency LoRA training — automating the creation of a dataset of expressions, poses, lighting conditions and angles of the MetaHuman-adapted character. This will enable us to seamlessly integrate generated content with Unreal renders, using each where it performs best.</p>
+            <p>These approaches require intensive data management, compatibility and automation of processes. The new pipeline provides a robust management system for handling this type of work, which involves new processes beyond those typically handled natively in production systems.</p>
+
+            <div class="project-grid">
+              <figure class="project-still">
+                <img src="assets/img/maintenance-still-1.jpg" alt="Maintenance production still.">
+              </figure>
+              <figure class="project-still">
+                <img src="assets/img/maintenance-still-2.jpg" alt="Maintenance production still.">
+              </figure>
+            </div>
+
+            <h4>Research outcomes</h4>
+            <p>In addition to the finished film, this project also supports an ongoing research agenda in animation studies and animation practice scholarship. To date, the <em>Maintenance</em> project and findings related to GenAI have been presented at numerous international conferences (Scanner: Animafest Zagreb; 2025 Annual Conference of the Society for Animation Studies). Further peer reviewed publications are planned, including:</p>
+            <ul>
+              <li><strong>Context Engineering for Animation Generation</strong> — investigating the changing format, role and processes of pre-production materials as integrated context, rather than a discrete stage in production planning.</li>
+              <li><strong>Latent Space Interpolation</strong> — formalization of theoretical contribution on the aesthetics of morphing images created with GenAI models.</li>
+            </ul>
+          </div>
+
+          <div class="tab-panel" id="panel-ae">
+            <div class="project-header">
+              <h3>Animal Encounters</h3>
+              <span class="project-lead">Interactive VR experience · Project lead: Gina Moore</span>
+            </div>
+            <p>An interactive VR work exploring animal performance, and dynamic (emerging and subsiding) worlds. The work features iconic Australian animals whose poses and actions come from keyframed animation combined with the viewer's own movement and gestures, so creature performance is always a little different from one encounter to the next.</p>
+            <p>The animals are rendered in a visual style ranging from stylised to photoreal, with detailed fur and skin that dissolves into polygons, lines, and particles during moments of "breakdown," triggered by the animals' and the viewer's movement and shifting attention. The landscape behaves in a similar way — trees, rocks, dirt and plants are always partial, building and unbuilding in response to viewer and animal attention and movement. The work rewards patience; the more slowly and closely the viewer attends, the more fully the animals and their world resolve, drawing the viewer into a slower, more careful way of seeing. The experience runs roughly five to ten minutes, offering close and fleeting encounters with four or five animals.</p>
+
+            <figure class="project-still">
+              <img src="assets/img/animal-encounters-kangaroo.jpg" alt="Animal Encounters render: a kangaroo figure in a stylised studio setting.">
+            </figure>
+
+            <h4>Connection to the other projects</h4>
+            <p>A viewer of <em>Animal Encounters</em> takes the place of the girl from <em>Not Worth Fixing</em>, standing in the same rural setting. The VR work and the film share 3D assets, but each has a different focus: <em>Not Worth Fixing</em> primarily follows the human relationships (including a humanoid robot) while <em>Animal Encounters</em> turns its focus to the animals and the natural environment — two versions of the same farm, each looking at something different, with the shared world making the contrast between them meaningful.</p>
+
+            <h4>Connection to the pipeline</h4>
+            <p>This work is created primarily with Unreal Engine, Houdini and Maya (modelling in Maya, fur groomed in Houdini, keyframe animation authored in both Maya and UE, fur simulation and procedural movement added in Unreal). It tests the pipeline's ability to enable smooth Maya, Houdini and Unreal-focused workflows, driving the development of new tools where a transfer proves slow or manual. The shared purpose across all three productions is to lower the friction of moving between applications to encourage creative exploration, by staff and by students — as well as moving work between applications, pipeline tools will encourage sharing between people, foregrounding the importance of collaboration among team members including staff, students, and graduates.</p>
+
+            <h4>Connection to Unreal</h4>
+            <p>Built and delivered in Unreal Engine, with control rig, animation blueprints and state machines blending authored and viewer-driven movement in real time, driving the building and unbuilding of animals and environment responsively as the viewer looks and moves. As an interactive, immersive VR work, it draws on Unreal's real-time rendering to respond to the viewer moment by moment, rather than producing a fixed result — alongside the linear film, showing the same assets carried into an interactive, immersive form, a transmedia relationship in which shared assets reach audiences as both authored film and real-time experience.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="budget">
+      <h2>Budget</h2>
+      <p>All figures are indicative of pending processing through the RMIT project costing tool. The request is in USD. RMIT applies indirect costs at 30% of total funding awards, covering administrative, infrastructural equipment, and utility costs, since the project will rely heavily on these elements from the institution.</p>
+
+      <table class="data">
+        <caption>Requested from Epic</caption>
+        <thead><tr><th>Item</th><th class="num">USD</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td>Animation and Games Technology Specialist</td><td class="num">21,340</td><td>Leads system architecture, core software build, plugin development, and hosting/release engineering across all six build phases. $1,787 in 2026, $16,973 in 2027, $5,806 in 2028.</td></tr>
+          <tr><td>Technical development support</td><td class="num">42,680</td><td>Build and test per-application plugins (Unreal, Maya, Houdini, ZBrush, Substance, Toon Boom, ComfyUI) and integrate the system into the three live productions. $3,573 in 2026, $33,945 in 2027, $11,613 in 2028.</td></tr>
+          <tr><td>Pilot production support <span style="color:var(--muted);font-weight:400;">(Not Worth Fixing, Maintenance, Animal Encounters)</span></td><td class="num">36,567</td><td>Artist, music and sound costs for the three productions that build and test the pipeline in live production use. $12,177 per production, spent in 2027 during the production trial phase.</td></tr>
+          <tr><td>Community dissemination <span style="color:var(--muted);font-weight:400;">(travel and accommodation @50%)</span></td><td class="num">14,340</td><td>Published findings, presentations, worked examples.</td></tr>
+          <tr><td>Direct costs</td><td class="num">114,927</td><td></td></tr>
+          <tr><td>RMIT indirect costs @ 30%</td><td class="num">34,478</td><td>General administration, project and finance administration, space costs, utilities, salaries, workstations etc.</td></tr>
+          <tr class="total"><td>Total request</td><td class="num">149,405</td><td></td></tr>
+        </tbody>
+      </table>
+
+      <table class="data" id="contributions">
+        <caption>RMIT contributions and other in-kind support</caption>
+        <thead><tr><th>Source</th><th class="num">Value</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td>RMIT academic staff time, three staff over 18 months</td><td class="num">AUD 120,000</td><td>Estimated cost based on fractions of FTE time commitment from 3 full-time RMIT staff to the project.</td></tr>
+          <tr><td>RMIT equitable learning grant</td><td class="num">AUD 10,000</td><td>Funds the accessibility dimension of the project.</td></tr>
+          <tr><td>Society for Animation Studies Animation and AI SIG grant</td><td class="num">AUD 1,390</td><td>Support for preparation and dissemination of findings related to AI applications in animation production.</td></tr>
+          <tr class="total"><td>Total</td><td class="num">AUD 133,900 / USD 96,408</td><td></td></tr>
+        </tbody>
+      </table>
+      <p style="color:var(--muted);font-size:.9rem;">RMIT caps project co-contributions at the level of external funding, so variations to the budget may require alterations to scope accordingly.</p>
+    </section>
+
+    <section class="block" id="leads">
+      <h2>Project leads</h2>
+      <p>Two PhD researchers and a lead animator with twenty years of industry production experience, at a degree granting institution, submitting under RMIT University.</p>
+
+      <div class="leads-grid">
+        <div class="lead-card">
+          <img src="assets/img/pat-sarell-showreel.jpg" alt="Still from Pat Sarell's animation showreel: Avatar creature-animation breakdown.">
+          <h3>Pat Sarell</h3>
+          <div class="lead-role">Industry</div>
+          <p>Over a twenty-five-year career in feature film, television, and interactive media, Pat has specialized in creature and character animation, directing, and production, holding senior and lead animation roles for more than fifteen years on large-scale feature productions. This includes five years at Weta Digital as a Senior Animator, working on <em>Avatar</em>, <em>Planet of the Apes</em>, and <em>Better Man</em>, and animating cameras, crafts and debris on the re-entry sequence in <em>Gravity</em> for Rising Sun Pictures and Framestore. Pat's work has contributed to more than twenty feature films, several Academy Award–winning, for directors including Steven Spielberg, James Cameron, Alfonso Cuarón, David Yates, George Miller, and Taika Waititi.</p>
+
+          <h4>Funded short films</h4>
+          <div class="project-grid">
+            <figure class="project-still">
+              <img src="assets/img/nullarbor-still.jpg" alt="Still from Nullarbor.">
+              <figcaption><strong>Nullarbor</strong> (2009) — 12 million views on Omeleto, $160,000. Created, written, co-directed, rigged, animated and animation directed by Pat. Received an AACTA Award, was shortlisted for an Academy Award, and received multiple international honors. Funded by Screen Australia and Screen Victoria, produced by The Lampshade Collective.</figcaption>
+            </figure>
+            <figure class="project-still">
+              <img src="assets/img/gallant-captain-still.jpg" alt="Still from Gallant Captain.">
+              <figcaption><strong>Gallant Captain</strong> (2013) — $156,000. Produced, animated and animation directed by Pat.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div>
+          <div class="lead-card">
+            <h3>Dr. Andy Buchanan</h3>
+            <div class="lead-role">Lecturer, 3D Animation and VFX</div>
+            <p>Andy serves as a member of the board of the Society for Animation Studies and chairs the Special Interest Group in Animation and AI. Andy's experimental animation work has been exhibited internationally, often focusing on metamorphic digital sculpture. Peer reviewed publications and numerous invited lectures over the last decade are likewise international in scope, focusing on new technologies for digital animation, as well as creativity and improvisation with digital tools. Recent and ongoing projects include the creation of animate-edu.ai (funded by ASIFA Hollywood) and the ground-up creation of a software platform for linking brain–computer interface devices to Unreal Engine.</p>
+            <p>The <em>Maintenance</em> project leverages ongoing research in GenAI integration as well as serving as an experimental test-bed for the development of new GenAI tools and creation of a seamlessly integrated Unreal/AI production.</p>
+          </div>
+
+          <div class="lead-card" style="margin-top:32px;">
+            <h3>Dr. Gina Moore</h3>
+            <div class="lead-role">Program Manager · 3D generalist &amp; creature animator</div>
+            <p>As well as being Program Manager, a teacher and academic researcher, Gina is a 3D generalist and creature animator with over twenty years of production experience, across animation studios and gallery commissions. Her creature and environment work includes <em>Flashover</em> (2025, Lumen Prize finalist), <em>Virtual Macquarie Island</em> for Tasmanian Museum and Art Gallery (made in Unreal Engine), and collaborative CG artworks including <em>Seahorse</em>, <em>Pigeon</em> and <em>Crown Phantom</em>. Her recent research and practice explore an approach to animation focused on response more than control — working with forces and emergence rather than imposing finished forms. <em>Animal Encounters</em> extends this into real time and interaction, where the viewer becomes part of what brings the animals to life.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="supporting">
+      <h2>Supporting material — RMIT student work</h2>
+      <div class="gallery">
+        <figure>
+          <img src="assets/img/oldies-of-the-coast-still.jpg" alt="Still from Oldies of the Coast.">
+          <figcaption>Oldies of the Coast (2026) — 3D stop-motion hybrid short.<span class="credit">Clarence Fennessy · Screened at Annecy International Animation Festival, Animafest Zagreb.</span></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/scraps-still.jpg" alt="Still from Scraps.">
+          <figcaption>Scraps (forthcoming) — 3D animated short.<span class="credit">Ell Donegan · Work in progress, final film using MetaHuman.</span></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/kingdom-hijinks-still.jpg" alt="Still from Kingdom Hijinks.">
+          <figcaption>Kingdom Hijinks (forthcoming) — 3D animated short.<span class="credit">Hans Porter · Final film made in Unreal.</span></figcaption>
+        </figure>
+      </div>
+      <figure class="project-still" style="margin-top:32px;">
+        <img src="assets/img/student-work-unreal-selection.jpg" alt="A selection of top emerging student work using MetaHuman and Unreal Engine.">
+        <figcaption>Up and coming student work with Unreal — a selection of the top emerging student work using MetaHuman and Unreal.</figcaption>
+      </figure>
+    </section>
+
+  </main>
+
+  <aside class="side-col">
+    <nav class="side-nav">
+      <div class="side-nav-title">On this page</div>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#need">The need</a></li>
+        <li><a href="#pipeline">Building the pipeline</a></li>
+        <li><a href="#unreal">Unreal Engine integration</a></li>
+        <li><a href="#genai">Generative tools</a></li>
+        <li><a href="#curriculum">Curricular integration</a></li>
+        <li><a href="#plan">Development plan</a></li>
+        <li><a href="#outcomes">Outcomes &amp; impact</a></li>
+        <li><a href="#pilots">Pilot projects</a></li>
+        <li><a href="#budget">Budget</a></li>
+        <li><a href="#leads">Project leads</a></li>
+        <li><a href="#supporting">Supporting material</a></li>
+      </ul>
+      <div class="side-cta">
+        <a class="btn btn-primary" href="#budget">View the budget</a>
+        <a class="btn btn-secondary" href="mailto:patsarell@gmail.com">Contact us</a>
+      </div>
+    </nav>
+  </aside>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <svg class="rmit-logo-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 34.56" aria-label="RMIT University logo">
+      <g id="RMIT_LOGO">
+        <polygon points="79.26 2.17 81.88 2.17 81.88 1.21 72.74 1.21 72.74 2.17 75.38 2.17 75.38 20.57 72.74 20.57 72.74 21.53 81.88 21.53 81.88 20.57 79.26 20.57 79.26 2.17" /><path d="M95.9,21.53v-1H93.1V2c4.28-.22,5,.7,5.56,4.59h.94l-.33-5.35H83l-.33,5.35h1C84.19,2.67,84.91,1.75,89.2,2v18.6H86.4v1h9.5" /><path d="M34.58,9.92V2.17h2.64c2.71,0,3.72.68,3.72,4.09,0,2.73-1.13,3.66-3.87,3.66H34.58M71,2.17v-1H63.5L59.09,15.1,54.84,1.21H47.37v1H50v18.4H47.16a2.39,2.39,0,0,1-2.66-2.65c0-5-1.07-6.75-5.82-7.49v-.06c2.83-.3,6.45-1.11,6.45-4.54,0-4.23-3.94-4.62-7.27-4.62h-9.8v1h2.62v18.4H28.06v1H37.2v-1H34.58v-9.7A7.21,7.21,0,0,1,39,12c.79.67,1.22,2.76,1.22,5.27,0,3.11,1.6,4.29,4.68,4.29h8.81v-1H51.16V2.48h.07l6,19.05h1l6.09-19h.09V20.57H61.87v1H71v-1H68.38V2.17Z" /><path d="M30.68,27.68a.21.21,0,0,0-.19-.25H30v-1h1.14c.51,0,.72.21.72.72v4.41a1.91,1.91,0,1,0,3.82,0v-4.4c0-.51.22-.72.73-.72h1.13v1H37a.21.21,0,0,0-.24.19.06.06,0,0,0,0,.06v4a2.82,2.82,0,0,1-3,2.92,2.83,2.83,0,0,1-3-2.92Z" /><path d="M38.25,33.45h.49a.22.22,0,0,0,.25-.2V26.46h1l3.54,5c.3.43.67,1.09.67,1.09h0c0-.36-.07-.73-.08-1.09V27.18c0-.51.22-.72.74-.72H46v1h-.49a.22.22,0,0,0-.25.19v6.8h-1l-3.56-5c-.29-.43-.65-1.08-.65-1.08h0s.06.64.06,1.08V33.7c0,.51-.21.72-.72.72H38.25Z" /><path d="M47.25,33.45H48v-6h-.78v-1h2.63v1H49.1v6h.78v1H47.25Z" /><path d="M51.11,27.68a.32.32,0,0,0-.37-.25h-.16v-1h.63c.56,0,.76.12.94.65L53.9,32c.14.43.3,1.1.3,1.1h0c.09-.37.19-.74.31-1.1l1.75-4.91c.19-.53.37-.65.93-.65h.64v1h-.16c-.21,0-.31,0-.37.25l-2.51,6.74h-1.2Z" /><path d="M59.23,27.43H58.5v-1h4.69c.5,0,.72.21.72.72v1h-1v-.5a.22.22,0,0,0-.19-.25H60.37v2.49h2.78v1H60.37v2.32a.21.21,0,0,0,.2.24h2.37a.22.22,0,0,0,.25-.2V32.7h1v1c0,.51-.21.72-.72.72H60c-.51,0-.73-.21-.73-.72Z" /><path d="M65.81,27.43h-.74v-1h3.48a2.21,2.21,0,0,1,2.38,2.33A2,2,0,0,1,69.5,30.9v0a.82.82,0,0,1,.33.36l1,1.9c.12.24.3.26.57.26h.15v1H71c-.62,0-.84-.07-1.1-.59l-1.09-2.15c-.2-.37-.35-.43-.79-.43h-1v3.17H65.8Zm2.59,2.85a1.3,1.3,0,0,0,1.37-1.44,1.27,1.27,0,0,0-1.35-1.41H66.93v2.85Z" /><path d="M73,32.57a2.89,2.89,0,0,0,2,1,1.24,1.24,0,0,0,1.37-1.18c0-1.67-3.85-1.41-3.85-3.9A2.3,2.3,0,0,1,75,26.32c.85,0,2.27.39,2.27,1.47v.65h-1v-.37c0-.42-.59-.72-1.23-.72-.85,0-1.4.47-1.4,1.07,0,1.62,3.84,1.25,3.84,3.87a2.32,2.32,0,0,1-2.53,2.27,3.55,3.55,0,0,1-2.64-1.19Z" /><path d="M78.63,33.45h.78v-6h-.78v-1h2.64v1h-.78v6h.78v1H78.63Z" /><path d="M84.85,27.43h-1.6a.22.22,0,0,0-.25.19v.56H82V27.13c0-.5.17-.67.68-.67h5.48c.51,0,.68.17.68.67v1.05h-1v-.5a.21.21,0,0,0-.19-.25H86v7H84.86Z" /><path d="M92.05,31l-2-3.24a.46.46,0,0,0-.48-.28h-.23v-1h.52a1,1,0,0,1,1.08.61l1.2,2c.26.44.49.89.49.89h0s.22-.45.49-.89l1.19-2a1,1,0,0,1,1.07-.61h.52v1h-.21a.48.48,0,0,0-.5.28l-2,3.24v3.47H92.05Z" />
+      </g>
+      <g id="Pixel">
+        <path d="M11.89,0h-3V2.47h-5V7.61H0v7.54H3.8v5.14H8.85v2.46h2.68c6.25,0,11.76-5,11.76-11.35A11.46,11.46,0,0,0,11.89,0" style="fill:#e60028" />
+      </g>
+    </svg>
+    <p class="foot-text">Creative Pedagogical Pipeline — an Epic MegaGrants proposal prepared by RMIT University. RMIT name and logo used to identify the submitting institution; not an official RMIT University publication. <a href="https://www.rmit.edu.au" target="_blank" rel="noopener">rmit.edu.au</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
