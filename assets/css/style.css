@@ -395,6 +395,17 @@ footer.site-footer .container{
 }
 footer .rmit-logo-mark{ width:64px; }
 footer .foot-text{ font-size:.85rem; max-width:52ch; }
+.foot-contacts{
+  list-style:none;
+  margin:14px 0 0;
+  padding:0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px 24px;
+  font-size:.85rem;
+}
+.foot-contacts a{ color:#fff; opacity:.85; text-decoration:underline; }
+.foot-contacts a:hover{ opacity:1; }
 footer a{ color:#fff; }
 
 /* responsive */
